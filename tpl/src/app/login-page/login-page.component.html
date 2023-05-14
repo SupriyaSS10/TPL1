@@ -1,0 +1,29 @@
+<div class="bg-img">
+  <img src="assets/images/login-bg-1.svg" >
+  
+  <div class="logo-img">
+  <img src="assets/images/Logo.svg">
+  <h3>Online Project Management</h3>
+  </div>
+  
+  <form  class="container">
+
+    <div class="text">
+      <!-- <img src="assets/images/login-bg-1.svg" alt=""> -->
+      <h1>Login to get started</h1>
+
+    </div>
+    
+    
+
+    <label for="email"><b>Email</b></label><br>
+    <input type="text" [(ngModel)]="mid" placeholder="Enter Email" name="email" required>
+    
+    <label for="psw"><b>Password</b></label><br>
+    <input type="password" [(ngModel)]="pass" placeholder="Enter Password" name="psw" required><br>
+
+
+    <button type="submit"  (click)="submit()"  class="btn">Login</button>
+  </form>
+
+</div>

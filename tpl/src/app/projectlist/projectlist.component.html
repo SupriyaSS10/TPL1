@@ -1,0 +1,138 @@
+<div class="bg_img">
+  <img src="assets/images/Header-bg.svg">
+</div>
+<div class="logo_img">
+  <img src="assets/images/Logo.svg">
+</div>
+
+<div class="dashboard_img">
+  <img src="assets/images/Dashboard.svg" (click)="openAddEditProjectForm()">
+</div>
+<div class="list_img">
+  <img src="assets/images/Project-list.svg" (click)="openAddEditProjectForm()">
+</div>
+<div class="plus_img">
+  <img src="assets/images/create-project.svg" (click)="openAddEditProjectForm()">
+</div>
+
+
+<div class="main-body">
+  <div class="search">
+    <mat-form-field>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Search" #input>
+    </mat-form-field>
+
+
+    <div class="table-container">
+      <table mat-table [dataSource]="dataSource" matSort>
+        <tr>
+          <!-- ID Column -->
+          <ng-container matColumnDef="Project Name">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Project Name </th>
+            <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+          </ng-container>
+
+
+          <ng-container matColumnDef="Reason">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Reason</th>
+            <td mat-cell *matCellDef="let row"> {{row.Reason}}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="Type">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Type</th>
+            <td mat-cell *matCellDef="let row"> {{row.Type}}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="Division">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Division</th>
+            <td mat-cell *matCellDef="let row"> {{row.Division}}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="Category">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Category</th>
+            <td mat-cell *matCellDef="let row"> {{row.Category}}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="Priority">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Priority</th>
+            <td mat-cell *matCellDef="let row"> {{row.Priority}}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="Department">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Department</th>
+            <td mat-cell *matCellDef="let row"> {{row.Department}}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="Location">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Location</th>
+            <td mat-cell *matCellDef="let row"> {{row.Location}}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="Status">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Status</th>
+            <td mat-cell *matCellDef="let row"> {{row.Status}}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
+            <td mat-cell *matCellDef="let row">
+              <!-- <button mat-icon-button color="primary" (click)="openEditForm(row)">
+                <mat-icon>edit</mat-icon>
+              </button>
+              </td>
+              <td>
+              <button mat-icon-button color="warn" (click)="deleteProject(row.id)">
+                <mat-icon>delete</mat-icon>
+              </button> -->
+
+            </td>
+          </ng-container>
+        </tr>
+
+        <!-- <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>
+          <div class="example-button-row">
+            <button mat-raised-button color="primary">Start</button>
+          </div>
+        </td>
+        <td>
+          <div class="example-button-row1">
+            <button mat-raised-button color="basic">Close</button>
+          </div>
+        </td>
+        <td>
+          <div class="example-button-row2">
+            <button mat-raised-button color="basic">Cancle</button>
+          </div>
+          <mat-button-toggle-group name="favoriteColor" aria-label="Favorite Color">
+            <mat-button-toggle id="start" value="Start">Start</mat-button-toggle>
+            <mat-button-toggle  id="Close" value="Close">Close</mat-button-toggle>
+            <mat-button-toggle id="Cancle" value="Cancle">Cancle</mat-button-toggle>
+          </mat-button-toggle-group>
+        </td>
+
+        </tr> -->
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+        <!-- Row shown when there is no matching data. -->
+        <tr class="mat-row" *matNoDataRow>
+          <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+        </tr>
+
+
+      </table>
+
+      <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+    </div>
+  </div>
