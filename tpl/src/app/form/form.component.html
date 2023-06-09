@@ -1,0 +1,418 @@
+<!-- <div class="bg_img">
+    <img src="assets/images/Header-bg.svg">
+</div>
+<div class="logo_img">
+    <img src="assets/images/Logo.svg">
+</div>
+
+<div class="dashboard_img">
+    <img src="assets/images/Dashboard.svg" (click)="openDashboard()">
+</div>
+<div class="list_img">
+    <img src="assets/images/Project-list.svg" (click)="showProjectList()">
+</div>
+<div class="plus_img">
+    <img src="assets/images/create-project-active.svg">
+
+    <div class="logout_img">
+        <img src="assets/images/Logout.svg" (click)="logout()">
+    </div>
+</div>
+
+<div class="full_screen">
+    <form class="form" [formGroup]="projectForm" (ngSubmit)="onFormSubmit()">
+
+        <div mat-dialog-content class="content">
+
+            <table class="table">
+                <tr>
+                    <td class="text1">
+                        <label for="area" class="text1"></label><br>
+                        <h1> <textarea id="area" rows="4" cols="70" style="max-width:100%" name="area"
+                                placeholder="Enter project theme"
+                                formControlName="Textarea">Enter project theme</textarea></h1>
+                    </td>
+
+                    <td mat-dialog-actions class="action1"><br>
+                        <button mat-raised-button color="primary" type="submit">Save Project</button>
+                    </td>
+                    <div class="text2">
+                        <mat-form-field [style.width.px]=260 appearance="outline">
+                            <mat-label>Enter project theme </mat-label>
+                            <input matInput #first>
+                            <mat-hint formControlName="Textarea"></mat-hint>
+                        </mat-form-field>
+                    </div>
+                </tr>
+            </table>
+
+
+            <div class="row1">
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Reason</mat-label>
+                    <mat-select formControlName="Reason">
+                        <mat-option *ngFor="let val of Reason" [value]="val">{{val}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Type</mat-label>
+                    <mat-select formControlName="Type">
+                        <mat-option *ngFor="let val of Type" [value]="val">{{val}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Division</mat-label>
+                    <mat-select formControlName="Divison">
+                        <mat-option *ngFor="let val of Divison" [value]="val">{{val}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field><br>
+            </div>
+
+            <div class="row2">
+                <mat-form-field appearance="outline">
+                    <mat-label>Category</mat-label>
+                    <mat-select formControlName="Category">
+                        <mat-option *ngFor="let val of Category" [value]="val">{{val}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Priority</mat-label>
+                    <mat-select formControlName="Priority">
+                        <mat-option *ngFor="let val of Priority" [value]="val">{{val}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Department</mat-label>
+                    <mat-select formControlName="Department">
+                        <mat-option *ngFor="let val of Department" [value]="val">{{val}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+            <div class="row3">
+                <mat-form-field class="col1" appearance="outline">
+                    <mat-label>Start date</mat-label>
+                    <input matInput [matDatepicker]="picker" formControlName="Start Date">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+
+                <mat-form-field class="col2" appearance="outline">
+                    <mat-label>End date</mat-label>
+                    <input matInput [matDatepicker]="picker1" formControlName="End Date">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+                    <mat-datepicker #picker1></mat-datepicker>
+                </mat-form-field>
+                <mat-form-field class="col3" appearance="outline">
+                    <mat-label>Location</mat-label>
+                    <mat-select formControlName="Location">
+                        <mat-option *ngFor="let val of Location" [value]="val">{{val}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-dialog-actions class="action2"><br>
+                    <button mat-raised-button color="primary" type="submit">Save Project</button>
+                </mat-dialog-actions>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="Responsive">
+   
+        <div class="textarea">
+            <h1> <textarea id="area" rows="4" cols="40" style="max-width:100%" name="area"
+                    placeholder="Enter project theme" formControlName="Textarea">Enter project theme</textarea></h1>
+        </div>
+        <div class="Reason">
+            <h3>Reason</h3>
+            <select class="select1" name="reason" id="reason" formControlName="reason" [style.width.px]=300>
+                <option value="val" *ngFor="let val of Reason" [value]="val">{{val}}</option>
+            </select>
+        </div>
+        <div class="Type">
+            <h3>Type</h3>
+            <select name="type" id="type" formControlName="type" [style.width.px]=300>
+                <option value="val" *ngFor="let val of Type" [value]="val">{{val}}</option>
+            </select>
+        </div>
+        <div class="Division">
+            <h3>Division</h3>
+            <select name="division" id="division" formControlName="division" [style.width.px]=300>
+                <option value="val" *ngFor="let val of Divison" [value]="val">{{val}}</option>
+            </select>
+        </div>
+        <div class="Category">
+            <h3>Category</h3>
+            <select name="category" id="category" formControlName="category" [style.width.px]=300>
+                <option value="val" *ngFor="let val of Category" [value]="val">{{val}}</option>
+            </select>
+        </div>
+        <div class="Priority">
+            <h3>Priority</h3>
+            <select name="priority" id="priority" formControlName="priority" [style.width.px]=300>
+                <option value="val" *ngFor="let val of Priority" [value]="val">{{val}}</option>
+            </select>
+        </div>
+        <div class="Department">
+            <h3>Department</h3>
+            <select name="department" id="department" formControlName="department" [style.width.px]=300>
+                <option value="val" *ngFor="let val of Department" [value]="val">{{val}}</option>
+            </select>
+        </div>
+        <mat-form-field class="startDate">
+            <h3>Start date</h3>
+            <input matInput [matDatepicker]="picker" formControlName="Start Date" appearance="outline">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field class="endDate">
+            <h3>End date</h3>
+            <input matInput [matDatepicker]="picker1" formControlName="End Date" appearance="outline">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+        </mat-form-field>
+        <div class="Location">
+            <h3>Location</h3>
+            <select name="location" id="location" formControlName="location" [style.width.px]=300>
+                <option value="val" *ngFor="let val of Location" [value]="val">{{val}}</option>
+            </select>
+        </div>
+        <mat-dialog-actions class="action2"><br>
+            <button mat-raised-button color="primary" type="submit">Save Project</button>
+        </mat-dialog-actions>
+    
+</div> -->
+
+<div class="full_screen">
+    <div class="bg_img">
+        <img src="assets/images/Header-bg.svg">
+    </div>
+    <div class="logo_img">
+        <img src="assets/images/Logo.svg">
+    </div>
+
+    <div class="dashboard_img">
+        <img src="assets/images/Dashboard.svg" (click)="openDashboard()">
+    </div>
+    <div class="list_img">
+        <img src="assets/images/Project-list.svg" (click)="showProjectList()">
+    </div>
+    <div class="plus_img">
+        <img src="assets/images/create-project-active.svg">
+
+        <div class="logout_img">
+            <img src="assets/images/Logout.svg" (click)="logout()">
+        </div>
+    </div>
+
+
+    <form class="form" [formGroup]="projectForm" (ngSubmit)="onFormSubmit()">
+
+        <div mat-dialog-content class="content">
+
+            <table class="table">
+                <tr>
+                    <td class="text1">
+                        <label for="area" class="text1"></label><br>
+                        <textarea id="area" rows="3" cols="95" style="max-width:100%" name="area"
+                            placeholder="Enter project theme" formControlName="Textarea">Enter project theme</textarea>
+                    </td>
+
+                    <td mat-dialog-actions class="action1"><br>
+                        <button mat-raised-button color="primary" type="submit">Save Project</button>
+                    </td>
+                    <div class="text2">
+                        <mat-form-field [style.width.px]=260 appearance="outline">
+                            <mat-label>Enter project theme </mat-label>
+                            <input matInput #first>
+                            <mat-hint formControlName="Textarea"></mat-hint>
+                        </mat-form-field>
+                    </div>
+                </tr><br><br><br>
+                <div class="row1">
+                    <tr>
+                        <td>
+                            <label for="reason">Reason</label><br>
+                            <select class="select1" name="reason" id="reason" formControlName="Reason"
+                                [style.width.px]=350 [style.height.px]="30">
+                                <option value="val" *ngFor="let val of Reason" [value]="val">{{val}}</option>
+                            </select>
+                        </td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <td>
+                            <label for="type">Type</label><br>
+                            <select name="type" id="type" formControlName="type" [style.width.px]=350
+                                [style.height.px]="30">
+                                <option value="val" *ngFor="let val of Type" [value]="val">{{val}}</option>
+                            </select>
+                        </td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <td>
+                            <label for="division">Division</label><br>
+                            <select name="division" id="division" formControlName="division" [style.width.px]=350
+                                [style.height.px]="30">
+                                <option value="val" *ngFor="let val of Divison" [value]="val">{{val}}</option>
+                            </select>
+                        </td>
+                    </tr>
+                </div><br>
+
+                <div class="row2">
+
+                    <tr>
+                        <td>
+                            <label for="category">Category</label><br>
+                            <select name="category" id="category" formControlName="category" [style.width.px]=350
+                                [style.height.px]="30">
+                                <option value="val" *ngFor="let val of Category" [value]="val">{{val}}</option>
+                            </select>
+                        </td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        <td>
+                            <label for="priority">Priority</label><br>
+                            <select name="priority" id="priority" formControlName="priority" [style.width.px]=350
+                                [style.height.px]="30">
+                                <option value="val" *ngFor="let val of Priority" [value]="val">{{val}}</option>
+                            </select>
+                        </td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <td>
+                            <label for="department">Department</label><br>
+                            <select name="department" id="department" formControlName="department" [style.width.px]=350
+                                [style.height.px]="30">
+                                <option value="val" *ngFor="let val of Department" [value]="val">{{val}}</option>
+                            </select>
+                        </td>
+                    </tr>
+                </div><br>
+
+                <div class="row3">
+                    <tr>
+                        <td>
+                            <label for="startdate">Start date as per project plan</label><br>
+                            <input type="date" id="startdate" formControlName="Start Date" name="startdate"
+                                [style.width.px]="345" [style.height.px]="30">
+                        </td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        <td>
+                            <label for="enddate">End date as per project plan</label><br>
+                            <input type="date" id="enddate" formControlName="End Date" name="enddate"
+                                [style.width.px]="345" [style.height.px]="30">
+                        </td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        <td>
+                            <label for="location">Location</label><br>
+                            <select name="location" id="location" formControlName="location" [style.width.px]=350
+                                [style.height.px]="30">
+                                <option value="val" *ngFor="let val of Location" [value]="val">{{val}}</option>
+                            </select>
+                        </td>
+                    </tr><br><br>
+                    <tr class="Status">
+                        <label for="Status">Status:<b>Registered</b></label>
+                    </tr>
+                </div>
+            </table>
+        </div>
+    </form>
+</div>
+
+<div class="Responsive">
+    <div class="bg_img1">
+        <img src="assets/images/Header-bg.svg">
+    </div>
+    <div class="logo_img1">
+        <img src="assets/images/Logo.svg">
+    </div>
+
+    <div class="dashboard_img1">
+        <img src="assets/images/Dashboard.svg" (click)="openDashboard()">
+    </div>
+    <div class="list_img1">
+        <img src="assets/images/Project-list.svg" (click)="showProjectList()">
+    </div>
+    <div class="plus_img1">
+        <img src="assets/images/create-project-active.svg">
+
+        <div class="logout_img1">
+            <img src="assets/images/Logout.svg" (click)="logout()">
+        </div>
+    </div>
+    <form [formGroup]="projectForm" (ngSubmit)="onFormSubmit()">
+        <div class="textarea">
+            <h1> <textarea id="area" rows="4" cols="35" style="max-width:100%" name="area"
+                    placeholder="Enter project theme" formControlName="Textarea">Enter project theme</textarea></h1>
+        </div>
+        <div class="Reason">
+            <h3>Reason</h3>
+            <select class="select1" name="reason" id="reason" formControlName="Reason" [style.width.px]=260>
+                <option value="val" *ngFor="let val of Reason" [value]="val">{{val}}</option>
+            </select>
+        </div>
+        <div class="Type">
+            <h3>Type</h3>
+            <select name="type" id="type" formControlName="Type" [style.width.px]=270>
+                <option value="val" *ngFor="let val of Type" [value]="val">{{val}}</option>
+            </select>
+        </div>
+        <div class="Division">
+            <h3>Division</h3>
+            <select name="division" id="division" formControlName="Divison" [style.width.px]=270>
+                <option value="val" *ngFor="let val of Divison" [value]="val">{{val}}</option>
+            </select>
+        </div>
+        <div class="Category">
+            <h3>Category</h3>
+            <select name="category" id="category" formControlName="Category" [style.width.px]=270>
+                <option value="val" *ngFor="let val of Category" [value]="val">{{val}}</option>
+            </select>
+        </div>
+        <div class="Priority">
+            <h3>Priority</h3>
+            <select name="priority" id="priority" formControlName="Priority" [style.width.px]=270>
+                <option value="val" *ngFor="let val of Priority" [value]="val">{{val}}</option>
+            </select>
+        </div>
+        <div class="Department">
+            <h3>Department</h3>
+            <select name="department" id="department" formControlName="Department" [style.width.px]=270>
+                <option value="val" *ngFor="let val of Department" [value]="val">{{val}}</option>
+            </select>
+        </div>
+        <div class="startDate">
+            <label for="start-date">Start Date</label><br><br>
+            <input type="date" id="start-date" name="start-date" formControlName="startDate" [style.width.px]=270>
+        </div>
+
+        <div class="endDate">
+            <label for="end-date">End Date</label><br><br>
+            <input type="date" id="end-date" name="end-date" formControlName="endDate" [style.width.px]=270>
+            <mat-error
+                *ngIf="projectForm.get('endDate')?.errors?.['endDateSmaller'] && projectForm.get('endDate')?.touched">
+                End date is smaller than start date
+            </mat-error>
+        </div>
+
+        <div class="Location">
+            <h3>Location</h3>
+            <select name="location" id="location" formControlName="Location" [style.width.px]=270>
+                <option value="val" *ngFor="let val of Location" [value]="val">{{val}}</option>
+            </select>
+        </div>
+        <mat-dialog-actions class="action2"><br>
+            <button mat-raised-button color="primary" type="submit">Save Project</button>
+        </mat-dialog-actions>
+    </form>
+</div>

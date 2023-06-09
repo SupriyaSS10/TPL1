@@ -1,4 +1,3 @@
-
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ProjectService } from '../services/project.service';
 import { MatPaginator } from '@angular/material/paginator';
@@ -7,12 +6,13 @@ import { MatTableDataSource } from '@angular/material/table';
 import { CoreService } from '../core.service';
 import { Router } from '@angular/router';
 
+
 @Component({
-  selector: 'app-projectlist',
-  templateUrl: './projectlist.component.html',
-  styleUrls: ['./projectlist.component.css']
+  selector: 'app-list1',
+  templateUrl: './list1.component.html',
+  styleUrls: ['./list1.component.css']
 })
-export class ProjectlistComponent implements OnInit {
+export class List1Component {
 
   displayedColumns: string[] = [
     'Textarea',
@@ -26,22 +26,53 @@ export class ProjectlistComponent implements OnInit {
     'Status',
     'action',
   ];
-  public userdata: any = [];
+  displayTextarea:string[]=[
+    'Textarea',
+  ];
+  displayReason:string[]=[
+    'Reason',
+  ];
+  displayType:string[]=[
+    'Type',
+  ];
+  displayDivison:string[]=[
+    'Divison',
+  ];
+  displayCategory:string[]=[
+    'Category',
+  ];
+  displayPriority:string[]=[
+    'Priority',
+  ];
+  displayDepartment:string[]=[
+    'Department',
+  ];
+  displayLocation:string[]=[
+    'Location',
+  ];
+  displayStatus:string[]=[
+    'Status',
+  ];
+
+  userdata: any = [];
   dataSource!: MatTableDataSource<any>;
-  public card1:any=[];
+  // dataSource1: MatTableDataSource<any> = new MatTableDataSource<any>([]);
+
+
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
   constructor(
+    // private _dialog: MatDialog,
     private ProjectService: ProjectService,
     private _coreService: CoreService,
     private router: Router
+    
   ) { }
 
   ngOnInit(): void {
     this.getProjectList();
-    this.responsiveProjectList();
 
   }
   startclick(_id: any) {
@@ -50,11 +81,17 @@ export class ProjectlistComponent implements OnInit {
       console.log(res.message);
       console.log("updated successfully");
       this.getProjectList();
-    })
-   }
 
-   closeclick(_id: any) {
+    })
+      
+    }
+
+
+
+
+  closeclick(_id: any) {
     console.log("Close clicked");
+
     this.ProjectService.UpateStatusClose(_id).subscribe((res: any) => {
       console.log(res.message);
       console.log("updated successfully");
@@ -75,51 +112,14 @@ export class ProjectlistComponent implements OnInit {
   getProjectList() {
     this.ProjectService.getProjectList().subscribe((res: any) => {
       this.userdata = res.data;
-      // console.log(this.userdata);
+      console.log(this.userdata);
       this.dataSource = new MatTableDataSource(res.data);
       this.dataSource.sort = this.sort;
       this.dataSource.paginator = this.paginator;
-      // this.card1=res.data;
     })
   }
 
-public responsiveProjectList(){
-
-    this.ProjectService.getProjectList().subscribe((res:any)=>{
-
-      this.card1=res.data;
-
-      console.log(this.card1);
-    })
-  }
-  
-  startclick1(_id: any) {
-
-    this.ProjectService.UpateStatusStart(_id).subscribe((res: any) => {
-      console.log(res.message);
-      console.log("updated successfully");
-      this.responsiveProjectList();
-    })
-   }
-   closeclick1(_id: any) {
-    console.log("Close clicked");
-    this.ProjectService.UpateStatusClose(_id).subscribe((res: any) => {
-      // console.log(res.message);
-      // console.log("updated successfully");
-      this.responsiveProjectList();
-    })
-  }
-
-  cancelclick1(TextArea: any) {
-    console.log("cancel clicked");
-    console.log(TextArea);
-    this.ProjectService.UpateStatusCancel(TextArea).subscribe((res: any) => {
-      // console.log(res.message);
-      this.responsiveProjectList();
-    })
-
-  }
-  applyFilter(event: Event) {
+    applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
 
@@ -140,3 +140,10 @@ public responsiveProjectList(){
     this.router.navigate(['/'])
   }
 }
+
+
+
+
+
+
+ 

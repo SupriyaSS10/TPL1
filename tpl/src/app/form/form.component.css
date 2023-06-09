@@ -1,0 +1,518 @@
+  /* .bg_img {
+    position: relative;
+    left: 80px;
+    width: 200px;
+    height: 120px;
+    top: 0px;
+    
+}
+
+.logo_img {
+    position: absolute;
+    left: 700px;
+    width: 50px;
+    top: 0px;
+    height: 10px;
+    margin-top: 10px;
+   
+    color: rgb(233, 236, 21);
+}
+
+.form {
+    width: 100%;
+    border: 2px;
+    border-radius: 15px;
+    border-color: blue;
+    margin-left: 200px;
+    margin-top: 100px;
+}
+
+.dashboard_img {
+    position: absolute;
+    left: 20px;
+    width: 20px;
+    height: 80px;
+    margin-top: 150px;
+
+}
+
+.list_img {
+    position: absolute;
+    left: 20px;
+    width: 20px;
+    height: 80px;
+    margin-top: 200px;
+}
+
+.plus_img {
+    position: absolute;
+    left: 20px;
+    width: 20px;
+    height: 100px;
+    margin-top: 300px;
+}
+
+.logout_img {
+    left: 10px;
+    width: 20px;
+    height: 300px;
+    margin-top: 150px;
+}
+
+.content {
+    padding-top: 10px;
+    border-radius: 20px;
+}
+
+.form {
+    position: absolute;
+    top: 100px;
+    border: 2px;
+    border-radius: 15px;
+    border-color: rgb(230, 93, 69);
+    box-shadow: rgb(32, 181, 226);
+}
+.text2{
+    display: none;
+}
+
+.row1,.row2,.row3 {
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+    width: 100%;
+    border-width: 200px;
+    position: relative;
+}
+
+
+
+.col1 {
+    width: 210px;
+    position: absolute;
+    margin-left: 0px;
+
+}
+
+.col2 {
+    width: 210px;
+    position: absolute;
+    margin-left: 290px;
+}
+
+.col3 {
+    width: 210px;
+    position: absolute;
+    margin-left: 590px;
+}
+
+.action1 {
+    padding: 0px 25px 20px;
+    flex: 1;
+    gap: 500px;
+    margin-left: 200px;
+    margin-top: 70px;
+}
+.action2{
+    display:none;
+}
+.Responsive{
+    display:none;
+}
+
+@media (min-width:200px) and (max-width:1100px) {
+    .bg_img {
+        left: 0px;
+        top: 0px;
+    }
+
+    .logo_img {
+        position: absolute;
+        left: 150px;
+        width: 50px;
+        top: 0px;
+        height: 10px;
+        margin-top: 10px;
+    }
+}
+
+  
+
+
+
+
+ @media (min-width:200px) and (max-width:1100px) {
+     
+     .dashboard_img {
+         position: absolute;         
+         height: 80px;
+         margin-left: 20px;
+         margin-top: 1250px;
+
+     }
+
+     .list_img {
+         position: absolute;        
+         margin-left: 170px;
+         margin-top: 1250px;
+     }
+
+     .plus_img {
+         position: absolute;       
+         margin-left: 310px;
+         margin-top: 1250px;
+     }
+
+     .logout_img {
+         left: 20px;
+         width: 20px;
+         height: 300px;
+         margin-left: 20px;
+         margin-top: -1280px;
+     }
+
+     .Responsive {
+         display: block;
+         position: relative;
+     }
+
+    .textarea{
+        position: absolute;
+        margin-left: 20px; 
+        margin-top: 80px;
+    }
+
+     .Reason {
+         position: absolute;
+         margin-left: 20px;  
+         margin-top: 150px;       
+     }
+     .select1{
+        width: 150px;
+        margin: 10px;
+     }
+
+     .select1:focus{
+        min-width: 150px;
+        width: auto;
+     }
+
+    .Type {
+         position: absolute;
+         margin-left: 20px;
+         margin-top: 250px;
+     }
+
+     .Division {
+         position: absolute;
+         margin-left: 20px;
+         margin-top: 350px;
+     }
+
+     .Category {
+         position: absolute;
+         margin-left: 20px;
+         margin-top: 450px;
+     }
+
+     .Priority {
+         position: absolute;
+         margin-left: 20px;
+         margin-top: 550px;
+     }
+
+     .Department {
+         position: absolute;
+         margin-left: 20px;
+         margin-top: 650px;
+     }
+
+     .startDate {
+         position: absolute;
+         margin-left: 20px;
+         margin-top: 750px;
+     }
+
+     .endDate {
+         position: absolute;
+         margin-left: 20px;
+         margin-top: 900px;
+     }
+
+     .Location {
+         position: absolute;
+         margin-left: 20px;
+         margin-top: 1050px;
+     }
+
+     .action1 {
+         display: none;
+     }
+
+     .action2 {
+         display: block;
+         position: absolute;
+         margin-left: 10px;
+         margin-top: 1150px;
+     }
+     .full_screen{
+        display:none;
+     }
+
+ } */
+
+ .bg_img {
+    position: relative;
+    left: 80px;
+    width: 200px;
+    height: 120px;
+    top: 0px;
+  }
+
+  .logo_img {
+    position: absolute;
+    left: 700px;
+    width: 50px;
+    top: 0px;
+    height: 10px;
+    margin-top: 10px;
+
+  }
+
+  .dashboard_img {
+    position: absolute;
+    left: 20px;
+    width: 20px;
+    height: 0px;
+    margin-top: 100px;
+  }
+
+  .list_img {
+    position: absolute;
+    left: 20px;
+    width: 20px;
+    height: 80px;
+    margin-top: 200px;
+  }
+
+  .plus_img {
+    position: absolute;
+    left: 20px;
+    width: 20px;
+    height: 100px;
+    margin-top: 300px;
+  }
+
+  .logout_img {
+    position: absolute;
+    left: 0px;
+    width: 20px;
+    /* height: 300px; */
+    margin-top: 60px;
+  }
+
+  .form{
+    position: absolute;
+  border:2px;
+  border-radius: 15px;
+box-shadow: #394347;
+margin-top: -10px;
+background-color: #fff;
+margin-left: 150px;
+width:1100px;
+height: 300px;
+padding:30px;
+
+  }
+
+  
+
+  .action1 {
+    position:absolute;
+    margin-left: -200px;
+     }
+     .Status{
+      position:absolute;
+      margin-left: 1000px;
+     }
+
+  .action2 {
+    display: none;
+  }
+
+  .Responsive {
+    display: none;
+  }
+
+  .full_screen {
+    display: block;
+  }
+
+  .text2 {
+    display: none;
+  }
+
+
+  @media (min-width:200px) and (max-width:1100px) {
+    .bg_img1 {
+      position: relative;
+      left: 0px;
+      top: 0px;
+    }
+
+    .logo_img1 {
+      position: absolute;
+      left: 150px;
+      width: 50px;
+      top: 0px;
+      height: 10px;
+      margin-top: 10px;
+    }
+    .fixed-buttons {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      background-color: #fff;
+      padding: 0px;
+      z-index: 100;
+  }
+
+    .dashboard_img1 {
+      position: absolute;
+      height: 80px;
+      margin-left: 20px;
+      margin-top: 1150px;
+
+    }
+
+    .list_img1 {
+      position: absolute;
+      margin-left: 150px;
+      margin-top: 1150px;
+    }
+
+    .plus_img1 {
+      position: absolute;
+      margin-left: 280px;
+      margin-top: 1150px;
+    }
+
+    .logout_img1 {
+      left: 20px;
+      width: 20px;
+      height: 300px;
+      margin-left: 15px;
+      margin-top: -1220px;
+    }
+
+    .full_screen {
+      display: none;
+    }
+
+  }
+
+  @media (min-width:200px) and (max-width:1100px) {
+
+    .Responsive {
+      display: block;
+      position: relative;
+    }
+
+    .textarea {
+      position: absolute;
+      margin-left: 40px;
+      margin-top: 70px;
+    }
+
+    .Reason {
+      position: absolute;
+      border: 2px;
+      margin-left: 40px;
+      margin-top: 150px;
+    }
+
+    .select1 {
+      width: 150px;
+      margin: 10px;
+    }
+
+    .select1:focus {
+      min-width: 150px;
+      width: auto;
+    }
+
+    .Type {
+      position: absolute;
+      border: 2px;
+      margin-left: 40px;
+      margin-top: 250px;
+    }
+
+    .Division {
+      position: absolute;
+      border: 2px;
+      margin-left: 40px;
+      margin-top: 350px;
+    }
+
+    .Category {
+      position: absolute;
+      border: 2px;
+      margin-left: 40px;
+      margin-top: 450px;
+    }
+
+    .Priority {
+      position: absolute;
+      border: 2px;
+      margin-left: 40px;
+      margin-top: 550px;
+    }
+
+    .Department {
+      position: absolute;
+      border: 2px;
+      margin-left: 40px;
+      margin-top: 650px;
+    }
+
+    .startDate {
+      position: absolute;
+      border: 2px;
+      margin-left: 40px;
+      margin-top: 750px;
+    }
+
+    .endDate {
+      position: absolute;
+      border: 2px;
+      margin-left: 40px;
+      margin-top: 850px;
+    }
+
+    .Location {
+      position: absolute;
+      border: 2px;
+      margin-left: 40px;
+      margin-top: 950px;
+    }
+
+    .action1 {
+      display: none;
+    }
+
+    .action2 {
+      display: block;
+      position: absolute;
+      margin-left: 100px;
+      margin-top: 1050px;
+    }
+
+    .full_screen {
+      display: none;
+    }
+
+  }

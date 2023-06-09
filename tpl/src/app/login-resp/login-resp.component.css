@@ -1,0 +1,37 @@
+.bg-img {
+  position: relative;
+  min-height: 60px;
+}
+
+.logo-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.title {
+  position: absolute;
+  text-align: center;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:white;
+  }
+
+.header {
+  text-align: center;
+  margin-top: 20px;
+}
+.form{
+  text-align: center;
+  margin-top: 20px;
+width:device-width;
+initial-letter-align :1em; ;
+} 
+
+
+
+
+
+

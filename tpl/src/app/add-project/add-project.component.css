@@ -1,0 +1,472 @@
+        /* .bg_img {
+          position: relative;
+          left: 80px;
+          width: 200px;
+          height: 120px;
+          top: 0px;
+        }
+
+        .logo_img {
+          position: absolute;
+          left: 700px;
+          width: 50px;
+          top: 0px;
+          height: 10px;
+          margin-top: 10px;
+
+        }
+
+        .sidenav {
+          margin-top: 120px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          height: 60%;
+          width: 30px;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          background-color: white;
+          overflow-x: hidden;
+          padding: 20px;
+        }
+
+       
+        .form {
+          position: absolute;
+          border: 2px;
+          border-radius: 15px;
+          box-shadow: #394347;
+          margin-top: -10px;
+          background-color: #fff;
+          margin-left: 150px;
+          width: 1100px;
+          height: 300px;
+          padding: 30px;
+
+        }
+
+        .action1 {
+          position: fixed;
+          margin-left: -200px;
+        }
+
+
+
+        .Status {
+          position: absolute;
+          margin-left: 1000px;
+        }
+
+        .action2 {
+          display: none;
+        }
+
+        .Responsive {
+          display: none;
+        }
+
+        .full_screen {
+          display: block;
+        }
+
+        .text2 {
+          display: none;
+        }       
+
+        @media (min-width:200px) and (max-width:800px) {
+          .bg_img1 {
+            position: relative;
+            left: 0px;
+            top: 0px;
+          }
+
+          .logo_img1 {
+            position: absolute;
+            left: 150px;
+            width: 50px;
+            top: 0px;
+            height: 10px;
+            margin-top: 10px;
+          }
+
+          .logout_img1 {
+            position: absolute;
+            left: 20px;
+            width: 20px;
+            height: 300px;
+            margin-left: 250px;
+            margin-top: -50px;
+            padding: 20px;
+
+          }
+
+          .Responsive {
+            display: block;
+            overflow-x: hidden;
+
+          }                 
+          .form {
+            position: relative;
+            margin-left: 20px;
+            margin-top: 20px; 
+            border: 2px;
+            border-radius: 15px;
+            padding: 10px;
+            box-shadow: #2297c5;
+            height: 480px;
+            width: 300px;
+            overflow-y: auto;
+            
+          }
+          
+          
+          .textarea {
+            position: absolute;
+            margin-left: 20px;
+            margin-top: 70px;
+          }
+
+          .Reason {
+            position: absolute;
+            border: 2px;
+            margin-left: 20px;
+            margin-top: 150px;
+           border-width: 230px;
+          }          
+
+          .Type {
+            position: absolute;
+            border: 2px;
+            margin-left: 20px;
+            margin-top: 250px;
+            border-width: 230px;
+          }
+
+          .Division {
+            position: absolute;
+            border: 2px;
+            margin-left: 20px;
+            margin-top: 350px;
+          }
+
+          .Category {
+            position: absolute;
+            border: 2px;
+            margin-left: 20px;
+            margin-top: 450px;
+          }
+
+          .Priority {
+            position: absolute;
+            border: 2px;
+            margin-left: 20px;
+            margin-top: 550px;
+          }
+
+          .Department {
+            position: absolute;
+            border: 2px;
+            margin-left: 20px;
+            margin-top: 650px;
+          }
+
+          .startDate {
+            position: absolute;
+            border: 2px;
+            margin-left: 20px;
+            margin-top: 750px;
+          }
+
+          .endDate {
+            position: absolute;
+            border: 2px;
+            margin-left: 20px;
+            margin-top: 850px;
+          }
+
+          .Location {
+            position: absolute;
+            border: 2px;
+            margin-left: 20px;
+            margin-top: 950px;
+          }
+
+            .Status {
+            position: absolute;
+            margin-left: 130px;
+            margin-top: 1000px;
+          }
+
+          .action1 {
+            display: none;
+          }
+
+          .action2 {
+            display: block;
+            position: absolute;
+            border: 2px;
+            border-radius: 150px;
+            margin-left: 20px;
+            margin-top: 1050px;
+            border-width: 300px;
+          }
+
+                  
+          .footer {
+            display:flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 24px;
+            width: 80%;
+            position: fixed;
+            top: 700px;
+            left: 0;
+            bottom:0;
+            background-color: white;
+            overflow-x: auto;
+          }
+          
+          .full_screen {
+            display: none;
+          }
+        } */
+
+
+        .bg_img {
+          position: relative;
+          left: 80px;
+          width: 200px;
+          height: 120px;
+          top: 0px;
+        }
+
+        .logo_img {
+          position: absolute;
+          left: 700px;
+          width: 50px;
+          top: 0px;
+          height: 10px;
+          margin-top: 10px;
+
+        }
+
+        .sidenav {
+          margin-top: 120px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          height: 60%;
+          width: 30px;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          background-color: white;
+          overflow-x: hidden;
+          padding: 20px;
+        }
+
+       
+        .form {
+          position: absolute;
+          border: 2px;
+          border-radius: 15px;
+          box-shadow: #394347;
+          margin-top: -10px;
+          background-color: #fff;
+          margin-left: 150px;
+          width: 1100px;
+          height: 300px;
+          padding: 30px;
+
+        }
+
+        .action1 {
+          position: fixed;
+          margin-left: -200px;
+        }
+
+
+
+        .Status {
+          position: absolute;
+          margin-left: 1000px;
+        }
+
+        .action2 {
+          display: none;
+        }
+
+        .Responsive {
+          display: none;
+        }
+
+        .full_screen {
+          display: block;
+        }
+
+        .text2 {
+          display: none;
+        }       
+
+        @media (min-width:200px) and (max-width:800px) {
+          .bg_img1 {
+            position: relative;
+            left: 0px;
+            top: 0px;
+          }
+
+          .logo_img1 {
+            position: absolute;
+            left: 150px;
+            width: 50px;
+            top: 0px;
+            height: 10px;
+            margin-top: 10px;
+          }
+
+          .logout_img1 {
+            position: absolute;
+            left: 20px;
+            width: 20px;
+            height: 300px;
+            margin-left: 250px;
+            margin-top: -50px;
+            padding: 20px;
+
+          }
+
+          .Responsive {
+            display: block;
+            overflow-x: hidden;
+
+          }                 
+          .form {
+            position: relative;
+            margin-left: 20px;
+            margin-top: 20px; 
+            border: 2px;
+            border-radius: 15px;
+            padding: 10px;
+            box-shadow: #2297c5;
+            height: 480px;
+            width: 300px;
+            overflow-y: auto;
+            
+          }
+          
+          
+          .textarea {
+            position: absolute;
+            margin-left: 20px;
+            margin-top: 70px;
+          }
+
+          .Reason {
+            position: absolute;
+            border: 2px;
+            margin-left: 20px;
+            margin-top: 150px;
+           border-width: 230px;
+          }          
+
+          .Type {
+            position: absolute;
+            border: 2px;
+            margin-left: 20px;
+            margin-top: 250px;
+            border-width: 230px;
+          }
+
+          .Division {
+            position: absolute;
+            border: 2px;
+            margin-left: 20px;
+            margin-top: 350px;
+          }
+
+          .Category {
+            position: absolute;
+            border: 2px;
+            margin-left: 20px;
+            margin-top: 450px;
+          }
+
+          .Priority {
+            position: absolute;
+            border: 2px;
+            margin-left: 20px;
+            margin-top: 550px;
+          }
+
+          .Department {
+            position: absolute;
+            border: 2px;
+            margin-left: 20px;
+            margin-top: 650px;
+          }
+
+          .startDate {
+            position: absolute;
+            border: 2px;
+            margin-left: 20px;
+            margin-top: 750px;
+          }
+
+          .endDate {
+            position: absolute;
+            border: 2px;
+            margin-left: 20px;
+            margin-top: 850px;
+          }
+
+          .Location {
+            position: absolute;
+            border: 2px;
+            margin-left: 20px;
+            margin-top: 950px;
+          }
+
+            .Status {
+            position: absolute;
+            margin-left: 130px;
+            margin-top: 1000px;
+          }
+
+          .action1 {
+            display: none;
+          }
+
+          .action2 {
+            display: block;
+            position: absolute;
+            border: 2px;
+            border-radius: 150px;
+            margin-left: 20px;
+            margin-top: 1050px;
+            border-width: 300px;
+          }
+
+                  
+          .footer {
+            display:flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 24px;
+            width: 80%;
+            position: fixed;
+            top: 700px;
+            left: 0;
+            bottom:0;
+            background-color: white;
+            overflow-x: auto;
+          }
+          
+          .full_screen {
+            display: none;
+          }
+        }

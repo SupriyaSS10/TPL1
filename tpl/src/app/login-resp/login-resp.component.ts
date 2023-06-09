@@ -1,16 +1,19 @@
 import { HttpClient } from '@angular/common/http';
 import { Component,OnInit } from '@angular/core';
+// import { FormsModule } from '@angular/forms';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms'
 import { ProjectService } from '../services/project.service';
 import { Router } from '@angular/router';
-
+// import { LoginModel } from './login.model';
+// import { CurrentDetailsComponent } from '../current-details/current-details.component';
 
 @Component({
-  selector: 'app-login-page',
-  templateUrl: './login-page.component.html',
-  styleUrls: ['./login-page.component.css']
+  selector: 'app-login-resp',
+  templateUrl: './login-resp.component.html',
+  styleUrls: ['./login-resp.component.css']
 })
-export class LoginPageComponent {
+
+export class LoginRespComponent {
   hide: boolean = false;
   public subscriber :any;
   data:any;
@@ -52,5 +55,7 @@ export class LoginPageComponent {
   })
 }
 }
+  
+
     
    
