@@ -16,74 +16,77 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color:white;
-  }
+  color: white;
+}
 
 .header {
   text-align: center;
   margin-top: 20px;
 }
-.form{
+
+.form {
   text-align: center;
   margin-top: 20px;
-width:device-width;
-initial-letter-align :1em; ;
-} 
+  width: device-width;
+  initial-letter-align: 1em;
+  ;
+}
+
 mat-card {
   border: 2px;
-  width:400px;
+  width: 400px;
   border-radius: 15px;
   position: absolute;
   margin-top: -200px;
   margin-left: 500px;
   height: 50%;
-   
-  }
 
-  @media (min-width:280px) and (max-width:1000px) {
-  
-    .bg-img {
-      position: relative;
-      min-height: 60px;
-    }
-    
-    .logo-img {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-    
-    .title {
-      position: absolute;
-      text-align: center;
-      top: 70%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color:white;
-      }
-    
-    .header {
-      text-align: center;
-      margin-top: 20px;
-    }
-    .form{
-      text-align: center;
-      margin-top: 20px;
-    width:device-width;
-    initial-letter-align :1em; ;
-    } 
-    mat-card {
-      border: 2px;
-      border-radius: 15px;
-      position: absolute;
-      margin-top:20px;
-      margin-left: 25px;
-      width:300px;
-      
-  }
-    
 }
-  
 
+@media (min-width:280px) and (max-width:1000px) {
 
+  .bg-img {
+    position: relative;
+    min-height: 60px;
+  }
+
+  .logo-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .title {
+    position: absolute;
+    text-align: center;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+
+  .header {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .form {
+    text-align: center;
+    margin-top: 20px;
+    width: device-width;
+    initial-letter-align: 1em;
+    ;
+  }
+
+  mat-card {
+    border: 2px;
+    border-radius: 15px;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 25px;
+    width: 300px;
+
+  }
+
+}

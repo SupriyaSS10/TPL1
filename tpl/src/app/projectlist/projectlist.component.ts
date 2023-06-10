@@ -28,7 +28,7 @@ export class ProjectlistComponent implements OnInit {
   ];
   public userdata: any = [];
   dataSource!: MatTableDataSource<any>;
-  public card1:any=[];
+  public card1: any = [];
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
@@ -51,9 +51,9 @@ export class ProjectlistComponent implements OnInit {
       console.log("updated successfully");
       this.getProjectList();
     })
-   }
+  }
 
-   closeclick(_id: any) {
+  closeclick(_id: any) {
     console.log("Close clicked");
     this.ProjectService.UpateStatusClose(_id).subscribe((res: any) => {
       console.log(res.message);
@@ -83,16 +83,16 @@ export class ProjectlistComponent implements OnInit {
     })
   }
 
-public responsiveProjectList(){
+  public responsiveProjectList() {
 
-    this.ProjectService.getProjectList().subscribe((res:any)=>{
+    this.ProjectService.getProjectList().subscribe((res: any) => {
 
-      this.card1=res.data;
+      this.card1 = res.data;
 
       console.log(this.card1);
     })
   }
-  
+
   startclick1(_id: any) {
 
     this.ProjectService.UpateStatusStart(_id).subscribe((res: any) => {
@@ -100,8 +100,8 @@ public responsiveProjectList(){
       console.log("updated successfully");
       this.responsiveProjectList();
     })
-   }
-   closeclick1(_id: any) {
+  }
+  closeclick1(_id: any) {
     console.log("Close clicked");
     this.ProjectService.UpateStatusClose(_id).subscribe((res: any) => {
       // console.log(res.message);
@@ -132,7 +132,7 @@ public responsiveProjectList(){
     this.router.navigate(['chart'])
   }
 
- public openProjectForm() {
+  public openProjectForm() {
     this.router.navigate(['add-project']);
   }
 
